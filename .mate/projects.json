@@ -1,0 +1,36 @@
+{
+    "normalizing_flow": {
+        "name": "normalizing_flow",
+        "project": {
+            "models": {
+                "multiscale_flow": {
+                    "name": "multiscale_flow",
+                    "exports": [
+                        "create_multiscale_flow"
+                    ],
+                    "errors": []
+                }
+            },
+            "data_loaders": {},
+            "trainers": {
+                "flow_trainer": {
+                    "name": "flow_trainer",
+                    "exports": [
+                        "TrainerModule"
+                    ],
+                    "errors": []
+                }
+            },
+            "experiments": {
+                "flow": {
+                    "name": "flow",
+                    "errors": [],
+                    "imports": [
+                        "trainers",
+                        "models"
+                    ]
+                }
+            }
+        }
+    }
+}

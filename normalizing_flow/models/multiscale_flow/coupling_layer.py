@@ -2,6 +2,7 @@ from flax import linen as nn
 import jax.numpy as jnp
 import numpy as np
 
+
 class CouplingLayer(nn.Module):
     network: nn.Module  # NN to use in the flow for predicting mu and sigma
     mask: np.ndarray  # Binary mask where 0 denotes that the element should be transformed, and 1 not.
@@ -47,6 +48,6 @@ class CouplingLayer(nn.Module):
             ldj += s.sum(axis=(1, 2, 3))
         else:
             z = (z * jnp.exp(-s)) - t
-            ldj -= s.sum(axis=(1, 2, 3)
+            ldj -= s.sum(axis=(1, 2, 3))
 
         return z, ldj, rng

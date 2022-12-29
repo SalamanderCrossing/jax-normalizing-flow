@@ -8,7 +8,21 @@
                     "exports": [
                         "create_multiscale_flow"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.23.5"
+                        ]
+                    ]
                 }
             },
             "data_loaders": {},
@@ -18,7 +32,33 @@
                     "exports": [
                         "TrainerModule"
                     ],
-                    "errors": []
+                    "errors": [],
+                    "dependencies": [
+                        [
+                            "flax",
+                            "0.6.2"
+                        ],
+                        [
+                            "jax",
+                            "0.4.1"
+                        ],
+                        [
+                            "numpy",
+                            "1.23.5"
+                        ],
+                        [
+                            "optax",
+                            "0.1.4"
+                        ],
+                        [
+                            "torch",
+                            "1.13.0"
+                        ],
+                        [
+                            "tqdm",
+                            "4.64.1"
+                        ]
+                    ]
                 }
             },
             "experiments": {
